@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Frontend-разработчик</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -14,6 +14,8 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -24,10 +26,10 @@
                         <a class="menu__icon--hidden icon--hidden" href="#"><i class="fas fa-bars"></i></a>
                         <ul class="menu__list header__menu-list">
                             <li class="menu__list-item">
-                                <a class="menu__link-header" href="#header__profile">Услуги</a>
+                                <a class="menu__link-header" href="#services">Услуги</a>
                             </li>
                             <li class="menu__list-item">
-                                <a class="menu__link-header" href="#main">Портфолио</a>
+                                <a class="menu__link-header" href="#portfolio">Портфолио</a>
                             </li>
                             <li class="menu__list-item">
                                 <a class="menu__link-header" href="#main__content-price">Стоимость</a>
@@ -56,7 +58,7 @@
                     <div class="header__profile-inner">
                         <h1 class="header__title">Мамаев Максим</h1>
                         <h2 class="header__subtitle">Frontend-разработчик и веб-верстальщик</h2>
-                        <button class="button--orange">Узнать больше</button>
+                        <a class="button--orange" href="#main">Узнать больше</a>
                     </div>
                     <img class="header__photo" src="img/man.png" alt="Мамаев Максим, Фронтенд-разработчик и веб-верстальщик">
                 </div>
@@ -70,7 +72,7 @@
 
     <main class="main" id="main">
         <div class="container">
-            <section class="main__content">
+            <section class="main__content" id="services">
                 <h2 class="main__title">Что я делаю</h2>
                 <div class="skills central__content">
                     <ul class="skills__list">
@@ -99,9 +101,9 @@
         <div class="main__background--grey">
             <div class="container">
                 <section class="main__content">
-                    <h2 class="main__title">Примеры моих работ</h2>
+                    <h2 class="main__title" id="portfolio">Примеры моих работ</h2>
                     <div class="works central__content">
-                        <button class="works__arrow works__arrow--left"></button>
+                        <a class="works__arrow works__arrow--left" href="#" role="button"></a>
                         <ul class="works__list">
                             <li class="works__item">
                                 <a class="works__link-img" href="#">
@@ -128,7 +130,7 @@
                                 </p>
                             </li>
                         </ul>
-                        <button class="works__arrow works__arrow--right"></button>
+                        <a class="works__arrow works__arrow--right" href="#" role="button"></a>
                     </div>
                     <button class="button--orange">Заказать проект</button>
                 </section>
@@ -154,10 +156,10 @@
                 <nav class="menu">
                     <ul class="menu__list footer__menu-list">
                         <li class="menu__list-item">
-                            <a class="menu__link-footer" href="#header__profile">Услуги</a>
+                            <a class="menu__link-footer" href="#services">Услуги</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__link-footer" href="#main">Портфолио</a>
+                            <a class="menu__link-footer" href="#portfolio">Портфолио</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__link-footer" href="#main__content-price">Стоимость</a>
