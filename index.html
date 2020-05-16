@@ -20,16 +20,18 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/popup.js"></script>
+  <script src="js/jquery.inputmask.min.js"></script>
   <script src="js/dropmenu.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/jquery-confirm.js"></script>
+  <script src="js/alert.js"></script>
 
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <section class="header__top">
       <div class="container">
         <div class="header__top-inner">
@@ -139,7 +141,7 @@
                   <img class="slider__img" data-lazy="img/example3.jpg" alt="">
                 </a>
                 <p class="slider__item-text">
-                  <a class="slider__name-link" href="#"> Сайт магазина «Рыболов»</a>
+                  <a class="slider__name-link" href="#">Сайт магазина «Рыболов»</a>
                 </p>
               </li>
               <li class="slider__item">
@@ -210,7 +212,9 @@
         </section>
       </section>
     </div>
-    <p class="footer__copy">© Мамаев Максим, 2020</p>
+    <p class="footer__copy">
+      <a class="footer__copy-link" href="#header">© Мамаев Максим, 2020</a>
+    </p>
   </footer>
 
   <!--Модальное окно-->
@@ -227,13 +231,13 @@
             <input type="hidden" name="form_subject" value="Форма связи">
 
             <label class="form__name">Имя</label>
-            <input class="form__input" name="Имя" type="text" placeholder="Иван" required>
+            <input class="form__input" name="Имя" type="text" placeholder="Иван" required="required">
             <label class="form__name">Номер телефона</label>
-            <input class="form__input" id="phone" name="Номер телефона" type="text" placeholder="+7 (999) 999-99-99" required>
+            <input class="form__input" id="phone" name="Номер телефона" type="text" placeholder="+7 (999) 999-99-99" required="required">
             <label class="form__name">E-mail</label>
-            <input class="form__input email-mask" name="E-mail" type="text" placeholder="email@mail.com" required>
+            <input class="form__input email-mask" name="E-mail" type="text" placeholder="email@mail.com" required="required">
             <label class="form__name">Комментарий</label>
-            <textarea class="form__input form__textarea" name="Комментарий к заявке" rows="7" maxlength="300" placeholder="Нужно сверстать страницу..." required></textarea>
+            <textarea class="form__input form__textarea" name="Комментарий к заявке" rows="7" maxlength="300" placeholder="Нужно сверстать страницу..." required="required"></textarea>
             <p class="note">* необходимо заполнить все поля</p>
             <button class="form__button-submit" type="submit" value="SEND">Оставить заявку</button>
           </form>

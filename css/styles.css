@@ -78,10 +78,6 @@
   /* Legacy iOS */
 }
 
-*, *::before, *::after {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 html,
 body {
   margin: 0;
@@ -320,7 +316,7 @@ button {
 }
 
 .header__profile-inner {
-  height: 300px;
+  min-height: 300px;
   padding: 125px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -566,8 +562,8 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -694,6 +690,7 @@ button {
 }
 
 .footer__copy {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -705,8 +702,14 @@ button {
   align-items: center;
   min-height: 75px;
   margin: 0;
-  color: white;
+  padding: 20px;
   background-color: #31293c;
+  text-align: center;
+}
+
+.footer__copy-link {
+  color: white;
+  text-decoration: none;
 }
 
 .popup__button-close {
@@ -745,7 +748,6 @@ button {
   }
 
   .menu--dropped {
-    cursor: pointer;
     display: block;
     position: relative;
     width: 30px;
@@ -1047,7 +1049,7 @@ button {
     padding: 15px;
     background: url('../img/communications.png') center center no-repeat;
     background-size: 50%;
-    border: 2px solid darksalmon;
+    border: 2px solid #f14c75;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
