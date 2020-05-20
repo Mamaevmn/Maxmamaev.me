@@ -12,8 +12,15 @@
   background-color: rgba(41, 39, 39, 0.75);
   height: 100vh;
   width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   z-index: 100;
   -webkit-transform: translateX(-50%);
@@ -23,10 +30,10 @@
 }
 
 .popup__window {
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 3%;
   background: -o-linear-gradient(13deg, #ff8f5a, #ff2f96);
   background: linear-gradient(77deg, #ff8f5a, #ff2f96);
   border-radius: 20px;
@@ -35,31 +42,55 @@
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   justify-content: center;
-  padding: 30px;
+  padding: 40px 30px;
   max-width: 400px;
   min-width: 270px;
   position: relative;
-  margin: 0 auto;
+  margin: 0 20px;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+.popup__window:focus,
+.popup__window:hover {
   box-shadow: 0 0 5px white;
 }
 
 .popup__button-close {
+  font-size: 30px;
   position: absolute;
   right: -40px;
   top: -5px;
   padding: 5px;
   color: white;
   background-color: transparent;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
 }
 
-.popup__button-close > i {
-  font-size: 25px;
+.popup__button-close:focus,
+.popup__button-close:hover {
+  color: darkred;
 }
 
 .popup__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  flex-basis: 90%;
 }
 
 .popup__title {
@@ -69,7 +100,7 @@
   text-transform: uppercase;
   text-align: center;
   text-shadow: 1px 1px 3px #222020;
-  margin: 0;
+  margin: 2vh 0;
 }
 
 .popup__subtitle {
@@ -77,18 +108,25 @@
   font-size: 20px;
   text-align: center;
   text-shadow: 1px 1px 3px #222020;
-  margin: 15px 0;
+  margin: 2vh 0;
 }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .form__name {
   color: white;
-  margin: 5px 0;
+  margin: 1vh 0;
   text-shadow: 1px 1px 3px #222020;
   align-self: flex-start;
 }
@@ -101,9 +139,15 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__input:hover {
   box-shadow: 0 0 5px white;
   border-color: lightcoral;
   outline: none;
@@ -121,7 +165,7 @@
 }
 
 .form__button-submit {
-  margin-top: 25px;
+  margin-top: 5vh;
   padding: 20px;
   width: 75%;
   align-self: center;
@@ -130,31 +174,40 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  box-shadow: 0 0 3px #222020;
   background-color: white;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+.form__button-submit:focus,
+.form__button-submit:hover {
+  box-shadow: 0 0 10px #222020;
 }
 
 @media (max-width: 655px) {
   .popup__button-close {
-    right: 20px;
-    top: 20px;
+    right: 15px;
+    top: 10px;
   }
+
   .form__button-submit {
-    margin-bottom: 15px;
+    margin-bottom: 3vh;
   }
 }
 
 @media (max-width: 550px) {
   .popup__window {
-    top: 7%;
     padding: 25px;
   }
+
   .popup__title {
     font-size: 20px;
   }
-  .popup__subtitle {
-    font-size: 14px;
-  }
+
+  .popup__subtitle,
   .form__name {
     font-size: 14px;
   }

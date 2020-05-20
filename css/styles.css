@@ -78,6 +78,10 @@
   /* Legacy iOS */
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 html,
 body {
   margin: 0;
@@ -163,8 +167,15 @@ button {
   color: black;
   text-align: center;
   margin-right: 30px;
+  word-break: break-all;
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.1s ease 0s;
+  -moz-transition: all 0.1s ease 0s;
+  -ms-transition: all 0.1s ease 0s;
+  -o-transition: all 0.1s ease 0s;
 }
 
+.menu__link-header:focus,
 .menu__link-header:hover {
   color: #fc557c;
   -webkit-text-decoration-line: underline;
@@ -209,6 +220,16 @@ button {
   border: 1px solid #f82370;
   letter-spacing: 0.1px;
   background-color: transparent;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+.button--transparent:focus,
+.button--transparent:hover {
+  box-shadow: 0 0 5px grey;
 }
 
 .header__button--transparent {
@@ -343,7 +364,7 @@ button {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: 0.1px;
-  white-space: nowrap;
+  word-break: break-all;
 }
 
 .header__subtitle {
@@ -360,6 +381,17 @@ button {
   border: none;
   font-size: 18px;
   text-align: center;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+.button--orange:focus,
+.button--orange:hover {
+  box-shadow: 0 0 5px grey;
+  background-color: orangered;
 }
 
 .header__photo {
@@ -367,6 +399,7 @@ button {
   float: right;
   margin-right: -80px;
   z-index: 1;
+  align-self: flex-end;
 }
 
 .header__photo--hidden {
@@ -610,6 +643,7 @@ button {
 .contacts__link {
   font-size: 25px;
   color: black;
+  padding: 10px 0;
 }
 
 .footer__contacts-phone {
@@ -620,6 +654,7 @@ button {
 .footer__contacts-mail {
   padding-left: 25px;
   background: url('../img/mail.png') left center no-repeat;
+  word-break: break-all;
 }
 
 .footer__icon-phone {
@@ -671,6 +706,16 @@ button {
   width: 45px;
   display: inline-block;
   opacity: 0.25;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+.socials__sprite:focus,
+.socials__sprite:hover {
+  opacity: 0.75;
 }
 
 .socials__vk {
@@ -712,10 +757,6 @@ button {
   text-decoration: none;
 }
 
-.popup__button-close {
-  font-size: 30px;
-}
-
 @media (max-width: 1125px) {
   .header__title {
     font-size: 54px;
@@ -752,6 +793,7 @@ button {
     position: relative;
     width: 30px;
     height: 20px;
+    cursor: pointer;
   }
 
   .menu--dropped span {
@@ -917,7 +959,7 @@ button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 200px;
+    min-height: 200px;
   }
 
   .header__title {
@@ -992,7 +1034,7 @@ button {
   }
 
   .footer__contacts-mail {
-    margin: 25px 0;
+    margin-bottom: 25px;
   }
 
   .button-orange--hidden {
@@ -1055,6 +1097,16 @@ button {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+  }
+
+  .header__phone-icon--hidden:focus,
+  .header__phone-icon--hidden:hover {
+    box-shadow: 0 0 5px grey;
   }
 
   .header__elements--animated {
@@ -1136,6 +1188,14 @@ button {
   .main__content-details {
     font-size: 15px;
   }
+
+  .footer__contacts,
+  .contacts__link,
+  .button-orange--hidden {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
 }
 
 @media (max-width: 415px) {
@@ -1145,5 +1205,9 @@ button {
 
   .header__top {
     margin-top: 0;
+  }
+
+  .contacts__link {
+    font-size: 5vw;
   }
 }

@@ -3,7 +3,8 @@ $(document).ready(function () {
   var $menu_drop = $('.menu--dropped'),
       $menu_mobile = $('.menu-mobile'),
       $nav_link = $('.menu__link-header'),
-      $popup = $('.popup__btn');
+      $popup = $('.popup__btn'),
+      $number = $('.header__number');
 
   $menu_drop.click(function() {
     $menu_drop.toggleClass('menu--active');
@@ -18,6 +19,12 @@ $(document).ready(function () {
   });
 
   $popup.click(function() {
+    $menu_drop.removeClass('menu--active');
+    $menu_mobile.removeClass('active');
+    $('body').removeClass('lock');
+  });
+
+  $number.click(function() {
     $menu_drop.removeClass('menu--active');
     $menu_mobile.removeClass('active');
     $('body').removeClass('lock');

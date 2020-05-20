@@ -2,7 +2,8 @@ $(document).ready(function () {
 
   $('.popup__btn').on('click', function () {
     event.preventDefault();
-    $('.popup').fadeIn()
+    $('.popup').fadeIn();
+    $('.popup').css("display", "flex");
 
     $("#phone").mask("+7 (999) 999-99-99");
 
