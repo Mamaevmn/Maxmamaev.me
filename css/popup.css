@@ -2,7 +2,8 @@
   border: none;
 }
 
-.popup {
+.popup,
+.popup-project {
   overflow: auto;
   display: none;
   position: fixed;
@@ -29,7 +30,8 @@
   -o-transform: translateX(-50%);
 }
 
-.popup__window {
+.popup__window,
+.popup__window-project {
   height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,8 +56,18 @@
   -o-transition: all 0.3s ease 0s;
 }
 
+.popup__window {
+  height: 50vh;
+}
+
+.popup__window-project {
+  height: 83vh;
+}
+
 .popup__window:focus,
-.popup__window:hover {
+.popup__window:hover,
+.popup__window-project:focus,
+.popup__window-project:hover {
   box-shadow: 0 0 5px white;
 }
 

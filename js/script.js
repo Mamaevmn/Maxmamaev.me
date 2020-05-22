@@ -47,7 +47,15 @@ $(document).ready(function () {
     enableScroll();
   };
 
+  document.getElementById("popup-project").onclick = function () {
+    enableScroll();
+  };
+
   $(document.body).on('click', '.popup__btn', function(){
+    disableScroll();
+  });
+
+  $(document.body).on('click', '.popup__btn-project', function(){
     disableScroll();
   });
 

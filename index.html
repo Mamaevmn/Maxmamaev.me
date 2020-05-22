@@ -152,7 +152,7 @@
               </li>
             </ul>
           </div>
-          <button class=" main__button--orange button--orange popup__btn">Заказать&nbsp;проект</button>
+          <button class="main__button--orange button--orange popup__btn-project">Заказать&nbsp;проект</button>
         </div>
       </div>
     </div>
@@ -215,23 +215,51 @@
     </p>
   </footer>
 
-  <!--Модальное окно-->
+  <!--Модальное окно звонка-->
   <div class="popup" id="popup">
     <div class="popup__window">
       <div class="popup__content">
         <button class="popup__button-close" id="enable-scroll">&times;</button>
         <h4 class="popup__title">Заинтересовало?</h4>
         <p class="popup__subtitle">Оставьте свои контактные данные для связи</p>
-          <form class="form">
+        <form class="form form--little">
+
+          <input type="hidden" name="project_name" value="Maxmamaev.me">
+          <input type="hidden" name="admin_email" value="mamaev.mn@maxmamaev.me">
+          <input type="hidden" name="form_subject" value="Форма связи">
+
+          <label class="form__name">Имя</label>
+          <input class="form__input" name="Имя" type="text" placeholder="Иван" required="required">
+          <label class="form__name">Номер телефона</label>
+          <input class="form__input" id="phone" name="Номер телефона" type="text" placeholder="+7 (999) 999-99-99"
+            required="required">
+          <button class="form__button-submit" type="submit" value="SEND">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно заказа -->
+  <div class="popup-project" id="popup-project">
+    <div class="popup__window-project">
+      <div class="popup__content">
+        <button class="popup__button-close" id="enable-scroll-project">&times;</button>
+        <h4 class="popup__title">Заинтересовало?</h4>
+        <p class="popup__subtitle">Оставьте свои контактные данные для связи и опишите проект</p>
+          <form class="form form--big">
 
             <input type="hidden" name="project_name" value="Maxmamaev.me">
             <input type="hidden" name="admin_email" value="mamaev.mn@maxmamaev.me">
-            <input type="hidden" name="form_subject" value="Форма связи">
+            <input type="hidden" name="form_subject" value="Заказ проекта">
 
             <label class="form__name">Имя</label>
             <input class="form__input" name="Имя" type="text" placeholder="Иван" required="required">
             <label class="form__name">Номер телефона</label>
-            <input class="form__input" id="phone" name="Номер телефона" type="text" placeholder="+7 (999) 999-99-99" required="required">
+            <input class="form__input" id="phone-project" name="Номер телефона" type="text" placeholder="+7 (999) 999-99-99" required="required">
+            <label class="form__name">E-mail</label>
+            <input class="form__input" name="E-mail" type="text" placeholder="email@mail.com" required="required">
+            <label class="form__name">Комментарий</label>
+            <textarea class="form__input form__textarea" name="Комментарий к заявке" rows="7" maxlength="300" placeholder="Нужно сверстать страницу..." required="required"></textarea>
             <button class="form__button-submit" type="submit" value="SEND">Оставить заявку</button>
           </form>
       </div>

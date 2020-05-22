@@ -687,6 +687,7 @@ button {
 }
 
 .socials {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1048,8 +1049,16 @@ button {
     margin-top: 50px;
   }
 
+  .socials {
+    margin-top: 0;
+  }
+
   .socials__sprite {
     margin-right: 15px;
+  }
+
+  .socials__sprite:last-child {
+    margin-right: 0;
   }
 
   .footer__button--transparent {
@@ -1191,7 +1200,8 @@ button {
 
   .footer__contacts,
   .contacts__link,
-  .button-orange--hidden {
+  .button-orange--hidden,
+  .footer__socials {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -1205,6 +1215,10 @@ button {
 
   .header__top {
     margin-top: 0;
+  }
+
+  .skills__item-text {
+    width: auto;
   }
 
   .contacts__link {
